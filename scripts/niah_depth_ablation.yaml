@@ -1,0 +1,392 @@
+niah_repeat_numbers_random:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+
+niah_repeat_numbers_0:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0
+
+niah_repeat_numbers_10:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.1
+
+niah_repeat_numbers_20:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.2
+
+niah_repeat_numbers_30:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.3
+
+niah_repeat_numbers_40:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.4
+
+niah_repeat_numbers_50:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.5
+
+niah_repeat_numbers_60:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.6
+
+niah_repeat_numbers_70:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.7
+
+niah_repeat_numbers_80:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.8
+
+niah_repeat_numbers_90:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.9
+
+niah_repeat_numbers_100:
+  task: niah
+  args:
+    type_haystack: repeat
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 1
+
+niah_essay_numbers_random:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+
+niah_essay_numbers_0:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0
+
+niah_essay_numbers_10:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.1
+
+niah_essay_numbers_20:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.2
+
+niah_essay_numbers_30:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.3
+
+niah_essay_numbers_40:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.4
+
+niah_essay_numbers_50:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.5
+
+niah_essay_numbers_60:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.6
+
+niah_essay_numbers_70:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.7
+
+niah_essay_numbers_80:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.8
+
+niah_essay_numbers_90:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.9
+
+niah_essay_numbers_100:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 1
+
+niah_essay_uuids_random:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: uuids
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+  
+niah_essay_uuids_0:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0
+  
+niah_essay_uuids_10:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.1
+
+niah_essay_uuids_20:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.2
+
+niah_essay_uuids_30:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.3
+
+niah_essay_uuids_40:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.4
+
+niah_essay_uuids_50:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.5
+
+niah_essay_uuids_60:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.6
+
+niah_essay_uuids_70:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.7
+
+niah_essay_uuids_80:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.8
+
+niah_essay_uuids_90:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 0.9
+
+niah_essay_uuids_100:
+  task: niah
+  args:
+    type_haystack: essay
+    type_needle_k: words
+    type_needle_v: numbers
+    num_needle_k: 1
+    num_needle_v: 1
+    num_needle_q: 1
+    fixed_depth: 1
