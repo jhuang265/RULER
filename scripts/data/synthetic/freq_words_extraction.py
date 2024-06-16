@@ -100,7 +100,7 @@ def generate_input_output(max_len, num_words=-1, coded_wordlen=6, vocab_size=200
     text, answer = gen_text(num_words)
     return text, answer, num_words
 
-def sys_kwext(num_samples: int, max_seq_length: int, incremental: int = 10):
+def sys_kwext(num_samples: int, max_seq_length: int, incremental: int = 1):
     write_jsons = []
     tokens_to_generate = args.tokens_to_generate
 

@@ -72,18 +72,14 @@ set -e
 # Activate Environment
 source $SCRATCH/venvs/ruler/bin/activate
 
-echo "Check"
+# echo "Check"
+# python -c "from flash_attn.layers.rotary import RotaryEmbedding;"
 
-python -c "from flash_attn.layers.rotary import RotaryEmbedding;"
+# echo "Preparing Data"
+python data/prepare.py --save_dir ${DATA_DIR} --benchmark ${BENCHMARK} --task ${TASK} --tokenizer_path ${TOKENIZER_PATH} --tokenizer_type ${TOKENIZER_TYPE} --max_seq_length ${MAX_SEQ_LENGTH} --model_template_type ${MODEL_TEMPLATE_TYPE} --num_samples ${NUM_SAMPLES} ${REMOVE_NEWLINE_TAB}
 
-echo "Preparing Data"
+# echo "Running Prediction"
+python pred/call_api_patched.py --random_seed ${RANDOM_SEED} --data_dir ${DATA_DIR} --save_dir ${PRED_DIR} --benchmark ${BENCHMARK} --task ${TASK} --server_type ${MODEL_FRAMEWORK} --model_name_or_path ${MODEL_PATH} --temperature ${TEMPERATURE} --top_k ${TOP_K} --top_p ${TOP_P} ${STOP_WORDS}
 
-python data/prepare.py --save_dir ${DATA_DIR} --benchmark ${BENCHMARK} --task ${TASK} --tokenizer_path ${TOKENIZER_PATH} --tokenizer_type ${TOKENIZER_TYPE} --max_seq_length ${MAX_SEQ_LENGTH} --model_template_type ${MODEL_TEMPLATE_TYPE} --num_samples ${NUM_SAMPLES} ${REMOVE_NEWLINE_TAB} \
-
-echo "Running Prediction"
-
-python pred/call_api_patched.py --random_seed ${RANDOM_SEED} --data_dir ${DATA_DIR} --save_dir ${PRED_DIR} --benchmark ${BENCHMARK} --task ${TASK} --server_type ${MODEL_FRAMEWORK} --model_name_or_path ${MODEL_PATH} --temperature ${TEMPERATURE} --top_k ${TOP_K} --top_p ${TOP_P} ${STOP_WORDS} \
-
-echo "Evaluating Predictions"
-
-python eval/evaluate.py --data_dir ${PRED_DIR} --benchmark ${BENCHMARK} \
+# echo "Evaluating Predictions"
+python eval/evaluate.py --data_dir ${PRED_DIR} --benchmark ${BENCHMARK}

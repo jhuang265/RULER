@@ -208,7 +208,7 @@ def generate_input_output(num_haystack):
     return input_text, answers
 
 
-def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 500):
+def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 50):
     write_jsons = []
     tokens_to_generate = args.tokens_to_generate
 

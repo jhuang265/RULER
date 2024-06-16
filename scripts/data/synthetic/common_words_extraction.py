@@ -102,7 +102,7 @@ def generate_input_output(num_words):
 
     return input_example + "\n" + input_text, answer
 
-def sys_word_pair_random(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 10):
+def sys_word_pair_random(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 1):
     write_jsons = []
     tokens_to_generate = args.tokens_to_generate
     

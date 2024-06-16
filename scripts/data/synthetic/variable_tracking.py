@@ -128,7 +128,7 @@ def generate_input_output(num_noises, num_chains, num_hops, is_icl=False):
     return input_text, vars[0]
 
 
-def sys_vartrack_w_noise_random(num_samples: int, max_seq_length: int, incremental: int = 10, 
+def sys_vartrack_w_noise_random(num_samples: int, max_seq_length: int, incremental: int = 1, 
                                 num_chains: int = 1, num_hops: int = 4,
                                 add_fewshot: bool = True,
                                 icl_example: str = None):

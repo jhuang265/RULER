@@ -143,7 +143,7 @@ def generate_input_output(index, num_docs):
     return input_text, curr_a
 
 
-def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 1): 
+def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 10): 
     
     write_jsons = []
     tokens_to_generate = args.tokens_to_generate
@@ -170,15 +170,14 @@ def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incre
     # Generate samples
     for index in tqdm(range(num_samples)):
         used_docs = num_docs
-        while(True):
+        while True:
             try:
                 input_text, answer = generate_input_output(index + args.pre_samples, used_docs)
                 length = len(TOKENIZER.text_to_tokens(input_text)) + tokens_to_generate
                 # print(length, max_seq_length)
-                if length > max_seq_length:
-                    # print("Here")
-                    break
-                    # raise ValueError(f"{length} exceeds max_seq_length.")
+                # if length > max_seq_length:
+                #     break
+                assert length <= max_seq_length, f"{length} exceeds max_seq_length."
                 break
             except:
                 if used_docs > incremental:
@@ -212,4 +211,3 @@ def main():
 
 if __name__=="__main__":
     main()
-
