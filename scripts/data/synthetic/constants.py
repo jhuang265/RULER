@@ -52,3 +52,4 @@ TASKS = {
         'answer_prefix': """ Answer:""",
     },
 }
+# python /network/scratch/j/jerry.huang/length_extrapolation/RULER/scripts/data/synthetic/qa.py --save_dir  /home/mila/j/jerry.huang/scratch/length_extrapolation/RULER/scripts/results/mamba2-2.7b/synthetic/1024/data/1 --save_name qa_1 --subset validation --tokenizer_path /home/mila/j/jerry.huang/scratch/length_extrapolation/RULER/scripts/models/gpt-neox-20b --tokenizer_type hf --max_seq_length 1024 --tokens_to_generate 32 --num_samples 250 --random_seed 42 --dataset squad --pre_samples 0 --template "Answer the question based on the given documents. Only give me the answer and do not output any other words.\n\nThe following are given documents.\n\n{context}\n\nAnswer the question based on the given documents. Only give me the answer and do not output any other words.\n\nQuestion: {query} Answer:"

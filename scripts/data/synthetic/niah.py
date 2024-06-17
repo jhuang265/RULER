@@ -213,7 +213,7 @@ def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incre
     tokens_to_generate = args.tokens_to_generate
 
     if args.type_haystack == 'essay':
-        incremental = 500
+        incremental = 50
     elif args.type_haystack == 'repeat':
         incremental = 25
     elif args.type_haystack == 'needle':

@@ -123,12 +123,22 @@ def generate_input_output(index, num_docs):
     curr_docs = QAS[index]['context']
     curr_more = QAS[index].get('more_context', [])
     if num_docs < len(DOCS):
+        """
         if (num_docs - len(curr_docs)) > len(curr_more):
             addition_docs = [i for i, d in enumerate(DOCS) if i not in curr_docs + curr_more]
             all_docs = curr_docs + curr_more + random.sample(addition_docs, max(0, num_docs - len(curr_docs) - len(curr_more)))
         else:
             all_docs = curr_docs + random.sample(curr_more, num_docs - len(curr_docs))
     
+        """
+        if num_docs < len(curr_docs):
+            all_docs = random.sample(curr_docs, num_docs)
+        elif num_docs - len(curr_docs) < len(curr_more):
+            all_docs = curr_docs + random.sample(curr_more, num_docs - len(curr_docs))
+        else:
+            addition_docs = [i for i, d in enumerate(DOCS) if i not in curr_docs + curr_more]
+            all_docs = curr_docs + curr_more + random.sample(addition_docs, max(0, num_docs - len(curr_docs) - len(curr_more)))
+        
         all_docs = [DOCS[idx] for idx in all_docs]
     else:
         all_docs = DOCS
@@ -143,8 +153,9 @@ def generate_input_output(index, num_docs):
     return input_text, curr_a
 
 
-def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 10): 
-    
+def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incremental: int = 1): 
+    print('Generating Documents')
+
     write_jsons = []
     tokens_to_generate = args.tokens_to_generate
     
@@ -198,6 +209,7 @@ def generate_samples(num_samples: int, max_seq_length: int, save_dir: str, incre
 
 
 def main():
+    print('Building Data')
     save_file = args.save_dir / f'{args.save_name}' / f'{args.subset}.jsonl'
     save_file.parent.mkdir(parents=True, exist_ok=True)
 
