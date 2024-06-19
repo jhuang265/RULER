@@ -90,6 +90,14 @@ MODEL_SELECT() {
             MODEL_FRAMEWORK="hf"
             ;;
 
+        qwen2_1.5b_instruct)
+            MODEL_PATH="${MODEL_DIR}/Qwen2-1.5B-Instruct"
+            MODEL_TEMPLATE_TYPE="qwen2_instruct"
+            TOKENIZER_PATH=${MODEL_PATH}
+            TOKENIZER_TYPE="hf"
+            MODEL_FRAMEWORK="hf"
+            ;;
+
         recurrentgemma_2b_it)
             MODEL_PATH="${MODEL_DIR}/recurrentgemma-2b-it"
             MODEL_TEMPLATE_TYPE="base"

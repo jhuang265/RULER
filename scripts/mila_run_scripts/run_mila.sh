@@ -1,13 +1,12 @@
 #!/bin/bash
-#SBATCH --partition=unkillable
+#SBATCH --partition=short-unkillable
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=1
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=32GB
-#SBATCH --hint=nomultithread
+#SBATCH --cpus-per-task=24
+#SBATCH --mem=128GB
 #SBATCH --exclude="cn-g[001-012],cn-k[001-002]"
-#SBATCH --time=6:00:00
+#SBATCH --time=3:00:00
 #SBATCH --requeue
 #SBATCH --signal=B:TERM@120
 #SBATCH --mail-type=FAIL
@@ -72,14 +71,8 @@ set -e
 # Activate Environment
 source $SCRATCH/venvs/ruler/bin/activate
 
-# echo "Check"
-# python -c "from flash_attn.layers.rotary import RotaryEmbedding;"
-
-# echo "Preparing Data"
 python data/prepare.py --save_dir ${DATA_DIR} --benchmark ${BENCHMARK} --task ${TASK} --tokenizer_path ${TOKENIZER_PATH} --tokenizer_type ${TOKENIZER_TYPE} --max_seq_length ${MAX_SEQ_LENGTH} --model_template_type ${MODEL_TEMPLATE_TYPE} --num_samples ${NUM_SAMPLES} ${REMOVE_NEWLINE_TAB}
 
-# echo "Running Prediction"
 python pred/call_api_patched.py --random_seed ${RANDOM_SEED} --data_dir ${DATA_DIR} --save_dir ${PRED_DIR} --benchmark ${BENCHMARK} --task ${TASK} --server_type ${MODEL_FRAMEWORK} --model_name_or_path ${MODEL_PATH} --temperature ${TEMPERATURE} --top_k ${TOP_K} --top_p ${TOP_P} ${STOP_WORDS}
 
-# echo "Evaluating Predictions"
 python eval/evaluate.py --data_dir ${PRED_DIR} --benchmark ${BENCHMARK}
